@@ -2,22 +2,28 @@ const readlineSync = require('readline-sync');
 const input = (prompt) => readlineSync.question(prompt);
 
 const rates = [
-    { code: "USD", rate: 1 },
-    { code: "JPY", rate: 113.5 },
-    { code: "EUR", rate: 0.89 },
-    { code: "RUB", rate: 74.36 },
-    { code: "GBP", rate: 0.75 },
+    // Rates now expressed per 1 EUR (EUR is the base)
+    { code: "EUR", rate: 1 },
+    { code: "USD", rate: 1.168 },  // example: 1 EUR ≈ 1.168 USD
+    { code: "JPY", rate: 175.0 },  // 1 EUR ≈ 175.0 JPY
+    { code: "RUB", rate: 29.1 },   // 1 EUR ≈ 29.1 RUB
+    { code: "GBP", rate: 0.875 },  // 1 EUR ≈ 0.875 GBP
+    { code: "CHF", rate: 1.052 },  // 1 EUR ≈ 1.052 CHF
+    { code: "SEK", rate: 12.8 },   // 1 EUR ≈ 12.8 SEK
+    { code: "NOK", rate: 12.1 },   // 1 EUR ≈ 12.1 NOK
+    { code: "PLN", rate: 4.61 },   // 1 EUR ≈ 4.61 PLN
+    { code: "CZK", rate: 27.3 },   // 1 EUR ≈ 27.3 CZK
 ];
-console.log("Welcome to Currency Converter!\n" +
-    `1 USD equals ${rates.find(r => r.code === "USD").rate} USD\n` +
-    `1 USD equals ${rates.find(r => r.code === "JPY").rate} JPY\n` +
-    `1 USD equals ${rates.find(r => r.code === "EUR").rate} EUR\n` +
-    `1 USD equals ${rates.find(r => r.code === "RUB").rate} RUB\n` +
-    `1 USD equals ${rates.find(r => r.code === "GBP").rate} GBP`)
+
+console.log("Welcome to Currency Converter!");
+rates.forEach(r => {
+    console.log(`1 EUR equals ${r.rate} ${r.code}`);
+});
 
 function askChoice() {
     while (true) {
-        console.log("What do you want to do?\n1-Convert currencies 2-Exit program");
+        console.log("What do you want to do?\n" +
+            "1-Convert currencies 2-Exit program");
         const choice = String(input());
         if (choice === "1" || choice === "2") return choice;
         console.log("Unknown input");
@@ -65,7 +71,7 @@ while (true) {
         console.log("Have a nice day!");
         process.exit(0);
     }
-    const allowed = ["JPY", "EUR", "RUB", "USD", "GBP"];
+    const allowed = rates.map(r => r.code);
 
     const inputCurrency = askCurrency("From: ", allowed);
     const outputCurrency = askCurrency("To: ", allowed);
