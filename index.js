@@ -4,15 +4,35 @@ const input = (prompt) => readlineSync.question(prompt);
 const rates = [
     // Rates now expressed per 1 EUR (EUR is the base)
     { code: "EUR", rate: 1 },
-    { code: "USD", rate: 1.168 },  // example: 1 EUR ≈ 1.168 USD
-    { code: "JPY", rate: 175.0 },  // 1 EUR ≈ 175.0 JPY
-    { code: "RUB", rate: 29.1 },   // 1 EUR ≈ 29.1 RUB
-    { code: "GBP", rate: 0.875 },  // 1 EUR ≈ 0.875 GBP
-    { code: "CHF", rate: 1.052 },  // 1 EUR ≈ 1.052 CHF
-    { code: "SEK", rate: 12.8 },   // 1 EUR ≈ 12.8 SEK
-    { code: "NOK", rate: 12.1 },   // 1 EUR ≈ 12.1 NOK
-    { code: "PLN", rate: 4.61 },   // 1 EUR ≈ 4.61 PLN
-    { code: "CZK", rate: 27.3 },   // 1 EUR ≈ 27.3 CZK
+    { code: "USD", rate: 1.168 },  // United States
+    { code: "JPY", rate: 175.0 },  // Japan
+    { code: "RUB", rate: 29.1 },   // Russia
+    { code: "GBP", rate: 0.875 },  // United Kingdom
+    { code: "CHF", rate: 1.052 },  // Switzerland
+    { code: "SEK", rate: 12.8 },   // Sweden
+    { code: "NOK", rate: 12.1 },   // Norway
+    { code: "PLN", rate: 4.61 },   // Poland
+    { code: "CZK", rate: 27.3 },   // Czech Republic
+    { code: "AUD", rate: 1.62 },   // Australian Dollar
+    { code: "CAD", rate: 1.49 },   // Canadian Dollar
+    { code: "CNY", rate: 8.52 },   // Chinese Yuan
+    { code: "HKD", rate: 9.14 },   // Hong Kong Dollar
+    { code: "SGD", rate: 1.58 },   // Singapore Dollar
+    { code: "NZD", rate: 1.78 },   // New Zealand Dollar
+    { code: "INR", rate: 97.5 },   // Indian Rupee
+    { code: "BRL", rate: 6.25 },   // Brazilian Real
+    { code: "MXN", rate: 20.3 },   // Mexican Peso
+    { code: "ZAR", rate: 21.7 },   // South African Rand
+    { code: "TRY", rate: 38.0 },   // Turkish Lira
+    { code: "AED", rate: 4.29 },   // UAE Dirham
+    { code: "SAR", rate: 4.38 },   // Saudi Riyal
+    { code: "ILS", rate: 4.35 },   // Israeli Shekel
+    { code: "KRW", rate: 1540 },   // South Korean Won
+    { code: "THB", rate: 39.5 },   // Thai Baht
+    { code: "MYR", rate: 5.52 },   // Malaysian Ringgit
+    { code: "IDR", rate: 18800 },  // Indonesian Rupiah
+    { code: "DKK", rate: 7.46 },   // Danish Krone
+    { code: "HUF", rate: 392 },    // Hungarian Forint
 ];
 
 console.log("Welcome to Currency Converter!");
