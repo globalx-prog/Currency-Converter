@@ -33,6 +33,40 @@ const rates = [
     { code: "IDR", rate: 18800 },  // Indonesian Rupiah
     { code: "DKK", rate: 7.46 },   // Danish Krone
     { code: "HUF", rate: 392 },    // Hungarian Forint
+    { code: "TWD", rate: 37.9 },   // Taiwan
+    { code: "PHP", rate: 65.4 },   // Philippines
+    { code: "VND", rate: 26400 },  // Vietnam
+    { code: "PKR", rate: 325 },    // Pakistan
+    { code: "BDT", rate: 127 },    // Bangladesh
+    { code: "LKR", rate: 404 },    // Sri Lanka
+    { code: "EGP", rate: 58.0 },   // Egypt
+    { code: "NGN", rate: 1570 },   // Nigeria
+    { code: "KES", rate: 144 },    // Kenya
+    { code: "MAD", rate: 12.1 },   // Morocco
+    { code: "TND", rate: 3.5 },    // Tunisia
+    { code: "DZD", rate: 157 },    // Algeria
+    { code: "GHS", rate: 16.2 },   // Ghana
+    { code: "UAH", rate: 46.0 },   // Ukraine
+    { code: "RON", rate: 4.97 },   // Romania
+    { code: "BGN", rate: 1.96 },   // Bulgaria
+    { code: "HRK", rate: 7.53 },   // Croatia (legacy HRK; now EUR area)
+    { code: "ISK", rate: 150 },    // Iceland
+    { code: "ARS", rate: 1240 },   // Argentina
+    { code: "CLP", rate: 1060 },   // Chile
+    { code: "COP", rate: 4930 },   // Colombia
+    { code: "PEN", rate: 4.2 },    // Peru
+
+    // Cryptocurrencies (symbol codes commonly used; treated as “per 1 EUR”)
+    { code: "BTC", rate: 0.000016 },  // Bitcoin
+    { code: "ETH", rate: 0.00026 },   // Ethereum
+    { code: "USDT", rate: 1.07 },     // Tether (USD-pegged)
+    { code: "USDC", rate: 1.07 },     // USD Coin (USD-pegged)
+    { code: "BNB", rate: 0.0018 },    // BNB
+    { code: "XRP", rate: 1.8 },       // XRP
+    { code: "ADA", rate: 3.0 },       // Cardano
+    { code: "DOGE", rate: 10.0 },     // Dogecoin
+    { code: "SOL", rate: 0.009 },     // Solana
+    { code: "TRX", rate: 9.6 }       // TRON
 ];
 
 console.log("Welcome to Currency Converter!");
